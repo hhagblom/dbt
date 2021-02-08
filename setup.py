@@ -24,7 +24,8 @@ with open(os.path.join(this_directory, 'README.md')) as f:
 
 
 package_name = "dbt"
-package_version = "0.19.0"
+package_version = "0.19.0-package-unique-names"
+package_version_dependencies = "0.19.0"
 description = """With dbt, data analysts and engineers can build analytics \
 the way engineers build applications."""
 
@@ -42,11 +43,11 @@ setup(
     url="https://github.com/fishtown-analytics/dbt",
     packages=[],
     install_requires=[
-        'dbt-core=={}'.format(package_version),
-        'dbt-postgres=={}'.format(package_version),
-        'dbt-redshift=={}'.format(package_version),
-        'dbt-snowflake=={}'.format(package_version),
-        'dbt-bigquery=={}'.format(package_version),
+        'dbt-core=={}'.format(package_version_dependencies),
+        'dbt-postgres=={}'.format(package_version_dependencies),
+        'dbt-redshift=={}'.format(package_version_dependencies),
+        'dbt-snowflake=={}'.format(package_version_dependencies),
+        'dbt-bigquery=={}'.format(package_version_dependencies),
     ],
     zip_safe=False,
     classifiers=[
